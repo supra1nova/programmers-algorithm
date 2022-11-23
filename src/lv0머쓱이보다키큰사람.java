@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class lv0머쓱이보키큰사람 {
+public class lv0머쓱이보다키큰사람 {
     public static int solution(int[] array, int height){
         return (int) Arrays.stream(array).filter(i -> i > height).count();
     }
