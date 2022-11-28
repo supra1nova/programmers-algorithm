@@ -1,3 +1,5 @@
+import java.util.stream.IntStream;
+
 public class lv0개미군단 {
 
     public static int solution1(int hp){
@@ -5,7 +7,7 @@ public class lv0개미군단 {
         int quotient = 0;
         for(int i : intArr){
             quotient += hp/i;
-            hp = hp%i;
+            hp %= i;
         }
         return quotient;
     }

@@ -30,6 +30,7 @@ public class lv0구슬을나누는경우의수 {
 
         return result;
     }
+
     public static void main(String[] args){
         System.out.println("solution1(3,2) = " + solution1(3, 2));
         System.out.println("solution1(5,3) = " + solution1(5, 3));

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class lv0삼각형의완성조건 {
+public class lv0삼각형의완성조건1 {
     public static int solution1(int[] sides){
         int max = Arrays.stream(sides).max().getAsInt();
         int total = Arrays.stream(sides).sum();
