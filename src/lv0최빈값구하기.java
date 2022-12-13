@@ -20,7 +20,7 @@ public class lv0최빈값구하기 {
             if(num == maxRepeatNum) count++;
         }
         // count값이 1이 아니면 최대값이 반복되는 것이므로 -1을 반환하고, 1이면 해당하는 index의 인덱스 값을 리턴한다.
-        return Arrays.stream(index).boxed().collect(Collectors.toList()).indexOf(maxRepeatNum);
+        return count != 1 ? -1 : Arrays.stream(index).boxed().collect(Collectors.toList()).indexOf(maxRepeatNum);
     }
 
     public static int solution2(int[] array){
@@ -74,6 +74,8 @@ public class lv0최빈값구하기 {
 
     public static void main(String[] args){
         System.out.println("solution1(new int[]{1,2,3,4,5,1,2,3,4,1,2,3,6}) = " + solution1(new int[]{1, 2, 3, 4, 5, 1, 2, 3, 4, 1, 2, 3, 6}));
+        System.out.println("solution1(new int[]{1,1,2,2}) = " + solution1(new int[]{1,1,2,2}));
         System.out.println("solution1(new int[]{1,2,3,3,3,4}) = " + solution1(new int[]{1, 2, 3, 3, 3, 4}));
+        System.out.println("solution3(new int[]{1,2,3,3,3,4}) = " + solution3(new int[]{1, 2, 3, 3, 3, 4}));
     }
 }

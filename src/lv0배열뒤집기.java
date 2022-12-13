@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Stack;
 import java.util.stream.Collectors;
 
 public class lv0배열뒤집기 {
@@ -19,6 +20,22 @@ public class lv0배열뒤집기 {
 
         Collections.reverse(list);
         return list.stream().mapToInt(Integer::intValue).toArray();
+    }
+
+    public static int[] solution3(int[] num_list) {
+        Stack stack = new Stack();
+        for(int num : num_list){
+            stack.push(num);
+        }
+        return stack.stream().mapToInt(i -> Integer.parseInt((String)i)).toArray();
+    }
+
+    public static int[] solution4(int[] num_list){
+        int[] newArr = new int[num_list.length];
+        for(int i = num_list.length - 1; i >= 0; i--){
+            newArr[num_list.length - 1 - i] = num_list[i];
+        }
+        return newArr;
     }
 
     public static void main(String[] args){
